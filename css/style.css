@@ -401,8 +401,8 @@ float: left;
     position: absolute;
     float: left;
 }
-#advertise{
-   
+/* banner parts starts */
+.product-banner{
     margin-top: 800px;
-    margin-left: 70px;
+    margin-left: 65px;
 }
