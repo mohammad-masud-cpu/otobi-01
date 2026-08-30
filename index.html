@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap style added -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome css added -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Normalize css added -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Custom css added -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+ 
+
+
+   <!-- panel parts starts -->
+<section id="panel">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1 class="panel-title">SHOP BY</h1>
+      </div>
+      <div class="panel-body">
+        SHOPPING OPTIONS
+
+        <!-- Category Dropdown -->
+        <div class="dropdown1">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Category
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Lighting</a></li>
+              <li><a href="#">Chairs & Stools</a></li>
+              <li><a href="#">Tables</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Color Dropdown -->
+        <div class="dropdown2">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Color
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a href="#">Black</a></li>
+              <li><a href="#">White</a></li>
+              <li><a href="#">Wood / Brown</a></li>
+              <li><a href="#">Red</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Manufacturer Dropdown -->
+        <div class="dropdown3">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Manufacturer
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+              <li><a href="#">IKEA</a></li>
+              <li><a href="#">Danish Menu</a></li>
+              <li><a href="#">Herman Miller</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Price Dropdown -->
+        <div class="dropdown4">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Price
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+              <li><a href="#">$0.00 - $19.99</a></li>
+              <li><a href="#">$20.00 - $49.99</a></li>
+              <li><a href="#">$50.00+</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Banner Parts starts -->
+
+   
+  <!-- বাম পাশের টেক্সট সেকশন -->
+  
+
+  <!-- ডান পাশের প্রোডাক্ট পার্টস (অ্যানিমেটেড) -->
+  <div class="banner-graphics">
+    <div class="graphics-wrapper slide-in-right">
+      <!-- আপনার প্রোডাক্টের মূল ছবি বা পার্টসের ছবি এখানে থাকবে -->
+      <img src="images/banner-grid.jpg" alt="Menu Flip Around Stolik Parts" class="product-image">
+    </div>
+  </div>
+</div>
+       
+<!-- another panel parts starts -->
+     <section id="panel2">
+        <div class="panel panel-default">
+           <div class="panel-body">
+             COMPARE PODUCUTS
+           </div>
+           <div class="panel-footer"> You have no items to compare </div>
+        </div>
+     </section>
+
+<!-- plugin parts starts -->
+<div class="container">
+    <div class="row">
+        
+        <!-- বাম পাশের সাইডবার (COMPARE PRODUCTS) -->
+        <div class="col-md-3">
+            <div class="sidebar-block">
+                <h3 class="sidebar-title"></h3>
+                <div class="sidebar-content">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ডান পাশের মূল কন্টেন্ট (BEDROOM & PRODUCTS) -->
+
+        <div class="col-md-9">
+            <h1 class="bedroom-title">BEDROOM</h1>
+
+            <div class="cpg-wrapper">
+                <!-- টপ বার -->
+
+                <div class="cpg-top-bar">
+                    <div class="cpg-view-switcher">
+                        <button class="cpg-btn cpg-view-btn active" data-view="grid" title="Grid View">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+                        </button>
+                        <button class="cpg-btn cpg-view-btn" data-view="list" title="List View">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/></svg>
+                        </button>
+                    </div>
+
+                    <div class="cpg-filter-right">
+                        <div class="cpg-sort-wrapper">
+                            <label for="cpg-sort">Sort By</label>
+                            <select id="cpg-sort" class="cpg-select">
+                                <option value="position">Position</option>
+                                <option value="name">Name</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                            </select>
+                        </div>
+                        <div class="cpg-item-count">Items 1-12 of 14</div>
+                    </div>
+
+                </div>
+
+                <!-- ৪ কলাম গ্রিড -->
+
+                <div class="cpg-products-container grid-view">
+                    
+                    <div class="cpg-product-card" data-name="Joust Duffle Bag" data-price="34">
+                        <div class="cpg-img-box"><img src="images/1-min.jpg" alt="Joust Duffle Bag"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Joust Duffle Bag</h3>
+                            <div class="cpg-price">$34.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Sprite Foam Yoga Brick" data-price="5">
+                        <div class="cpg-img-box"><img src=" images/26-26-min.jpg" alt="Sprite Foam Yoga Brick"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Sprite Foam Yoga Brick</h3>
+                            <div class="cpg-price">$5.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Go-Get'r Pushup Grips" data-price="19">
+                        <div class="cpg-img-box"><img src="images/4-min.jpg" alt="Go-Get'r Pushup Grips"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★☆☆</div>
+                            <h3 class="cpg-title">Go-Get'r Pushup Grips</h3>
+                            <div class="cpg-price">$19.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Zing Jump Rope" data-price="12">
+                        <div class="cpg-img-box"><img src="images/15-min_6.jpg" alt="Zing Jump Rope"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Zing Jump Rope</h3>
+                            <div class="cpg-price">$12.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Dual Handle Cardio Ball" data-price="8">
+                        <div class="cpg-img-box"><img src="images/3-min.jpg" alt="Dual Handle Cardio Ball"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★☆☆</div>
+                            <h3 class="cpg-title">Dual Handle Cardio Ball</h3>
+                            <div class="cpg-price"><span class="cpg-sale">$8.00</span> <span class="cpg-old">$12.00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Affirm Water Bottle" data-price="8">
+                        <div class="cpg-img-box"><img src="images/19-min_3.jpg" alt="Affirm Water Bottle"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★☆☆</div>
+                            <h3 class="cpg-title">Affirm Water Bottle</h3>
+                            <div class="cpg-price"><span class="cpg-sale">$8.00</span> <span class="cpg-old">$10.00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Push It Messenger Bag" data-price="50">
+                        <div class="cpg-img-box"><img src="images/8-8-min.jpg" alt="Push It Messenger Bag"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Push It Messenger Bag</h3>
+                            <div class="cpg-price">$50.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Overnight Duffle" data-price="45">
+                        <div class="cpg-img-box"><img src="images/6-6-min.jpg" alt="Overnight Duffle"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Overnight Duffle</h3>
+                            <div class="cpg-price">$45.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Overnight Duffle" data-price="45">
+                        <div class="cpg-img-box"><img src="images/17-17-min.jpg" alt="Overnight Duffle"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Overnight Duffle</h3>
+                            <div class="cpg-price">$45.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Overnight Duffle" data-price="45">
+                        <div class="cpg-img-box"><img src="images/9-min_1_2 (1).jpg" alt="Overnight Duffle"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Overnight Duffle</h3>
+                            <div class="cpg-price">$45.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Overnight Duffle" data-price="45">
+                        <div class="cpg-img-box"><img src="images/10-10-min.jpg" alt="Overnight Duffle"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Overnight Duffle</h3>
+                            <div class="cpg-price">$45.00</div>
+                        </div>
+                    </div>
+
+                    <div class="cpg-product-card" data-name="Overnight Duffle" data-price="45">
+                        <div class="cpg-img-box"><img src="images/16-16-min.jpg" alt="Overnight Duffle"></div>
+                        <div class="cpg-product-info">
+                            <div class="cpg-rating">★★★★☆</div>
+                            <h3 class="cpg-title">Overnight Duffle</h3>
+                            <div class="cpg-price">$45.00</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- plugin parts ends -->
+     
+   <!-- another panel parts starts -->
+     <section id="panel3">
+        <div class="panel panel-default">
+           <div class="panel-body">
+             MY WISH LIST
+           </div>
+           <div class="panel-footer"> You have no items in your wish list </div>
+        </div>
+     </section>
+     <!-- MY WISH LIST BLOCK -->
+<div class="sidebar-block wishlist-block">
+   <div class="wishlist-content">
+    
+    <!-- Item 1 -->
+    <div class="wishlist-item">
+      <div class="wishlist-img">
+        <img src="images/img1_static2.jpg" alt="Aim Analog">
+      </div>
+      <div class="wishlist-details">
+        <h4 class="wishlist-item-title"><a href="#">Aim Analog</a></h4>
+        <div class="wishlist-rating">★★★★★</div>
+        <div class="wishlist-price">$45.00</div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="wishlist-item">
+      <div class="wishlist-img">
+        <img src="images/4-min.jpg" alt="Sprite Foam Yoga Brick">
+      </div>
+      <div class="wishlist-details">
+        <h4 class="wishlist-item-title"><a href="#">Sprite Foam Yoga Brick</a></h4>
+        <div class="wishlist-rating">★★★★★</div>
+        <div class="wishlist-price">$5.00</div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="wishlist-item">
+      <div class="wishlist-img">
+        <img src="images/26-26-min.jpg" alt="Go-Get'r Pushup Grips">
+      </div>
+      <div class="wishlist-details">
+        <h4 class="wishlist-item-title"><a href="#">Go-Get'r Pushup Grips</a></h4>
+        <div class="wishlist-rating">★★★★★</div>
+        <div class="wishlist-price">$19.00</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- SIDEBAR BANNER advertise  PARTS STARTS -->
+ <section id="advertise">
+  <img src="images/left_banner.jpg" alt="">
+ </section>
+
+
+
+    <!-- script.js file added -->
+    <script src="custom-product-grid/script.js"></script>
+    <!-- jQuery file added -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Js file added -->
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+</html>
+    
+    
+
+
+
+
+
+
+
+
+
+
+ 
