@@ -1,3 +1,35 @@
+ /* page header parts starts */
+ .breadcrumb-bar {
+  background-color: #2b2b2b; /* ব্যাকগ্রাউন্ডের কালো/গাঢ় কালার */
+  padding: 12px 20px;       /* ভেতরের স্পেসিং */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.separator{
+    color: #ffffff;
+    padding: 20px;
+}
+.breadcrumb-bar a {
+  color: #ffffff;             /* সাধারণ অবস্থায় লেখা সাদা থাকবে */
+  text-decoration: none;      /* নিচের কালো দাগ/আন্ডারলাইন বন্ধ করবে */
+  outline: none;              /* ক্লিক করার পর বর্ডার আসা বন্ধ করবে */
+}
+
+.breadcrumb-bar a:visited {
+  color: #ffffff;             /* লিংকে ক্লিক করার পরও কালার পরিবর্তন হবে না */
+}
+
+.breadcrumb-bar a span {
+  color: #ff9900;             /* Bedroom লেখার কমলা কালার ঠিক থাকবে */
+}
+
+.breadcrumb-bar a:focus,
+.breadcrumb-bar a:active {
+  color: #ffffff;             /* ক্লিক করার মুহূর্তে বা ফোকাস থাকলে কালার ঠিক থাকবে */
+  outline: none;
+  text-decoration: none;
+}
+/* panel parts starts */
 .panel{
     width: 350px;
     margin-top: 30px;
@@ -46,16 +78,27 @@ float: left;
     width: 320px;
     font-size: 20px;
 }
+/* ড্রপডাউন কন্টেইনারে hover চালু রাখা */
+.dropdown4:hover .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* বাটন ও ড্রপডাউনের মাঝের ডিফল্ট মার্জিন সরাতে */
+    top: 100%;     /* ড্রপডাউনটি ঠিক বাটনের নিচ থেকে শুরু হবে */
+}
+
+/* বাটন এবং ড্রপডাউন লিস্টের মাঝে একটি অদৃশ্য সেতু (Bridge) তৈরি করা */
+.dropdown4 .dropdown-menu::before,
+.dropdown .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;    /* লিস্টের উপরে ১০ পিক্সেল অদৃশ্য জায়গা ঢেকে রাখবে */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+}
 
 /* Banner Parts starts */
-
-
-
-
-
-
-
-
 /* গ্রাফিক্স ও অ্যানিমেশন অংশ */
 
 .banner-graphics {
@@ -178,23 +221,76 @@ float: left;
     color: #333;
 }
 
-.cpg-filter-right {
+.cpg-sort-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 12px;
-    color: #666;
+    gap: 10px;
 }
 
+/* কাস্টম ড্রপডাউন কন্টেইনার */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-.cpg-select {
-    padding: 4px 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
+/* প্রধান বাটন বা সিলেক্ট বক্সের মূল চেহারা */
+.dropdown-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 6px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
     outline: none;
-    font-size: 12px;
-    color: #555;
-    background: #fff;
+}
+
+/* ড্রপডাউন মেনু সাধারণ অবস্থায় লুকানো থাকবে */
+/* ড্রপডাউন মেনু পজিশন ও ফিক্স */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 80%; /* ১০০% থেকে কমিয়ে ৮০% করায় ফাঁকা দূর হবে */
+    left: 0;
+    min-width: 160px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 999; /* ব্যানার বা অন্য বক্সের ওপরে দেখানোর জন্য */
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* বাটন ও মেনুর মধ্যকার অদৃশ্য ফাঁকা পূরণ করার জন্য এটি খুব জরুরি */
+.custom-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px; /* এটি বাটন ও মেনুর মধ্যকার অদৃশ্য ফাঁকাটি ধরে রাখবে */
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* ১. মাউস/কার্সার নিয়ে যাওয়ার সাথে সাথে ড্রপডাউন ওপেন হবে (Hover) */
+.custom-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ২. ড্রপডাউনের অপশনে কার্সার নিলে ব্যাকগ্রাউন্ড কালো এবং লেখা সাদা হবে */
+.dropdown-menu li a:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* ৪ কলাম গ্রিড লেআউট */
@@ -446,4 +542,80 @@ float: left;
 /* মাউস কার্সার ছবিতে আনলে জুম হবে */
 .banner-link:hover .product-banner img {
   transform: scale(1.05); 
+}
+/* page footer parts starts */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    padding: 10px 15px;
+    background-color: #fff;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-left: 400px;
+     position: relative;
+    margin-top: -110px; /* ১০-কে ১০০ পিক্সেল ওপরে তুলে দেবে */
+    z-index: 10;        /* অন্য উপাদানের নিচে যেন না ঢাকা পড়ে */
+    margin-right: 40px;
+}
+
+/* বাম পাশের পেজিনেশন */
+.pagination-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pagination-left .page-num {
+    text-decoration: none;
+    color: #666;
+    font-weight: normal;
+    outline: none; /* ক্লিক করলে কালো বর্ডার আসা বন্ধ করার জন্য */
+}
+
+.pagination-left .page-num.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.pagination-left .next-btn {
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    display: inline-block;
+    border-radius: 2px;
+    outline: none; /* ক্লিক করলে কালো বর্ডার আসা বন্ধ করার জন্য */
+}
+
+/* ডান পাশের অংশ */
+.pagination-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Show লিংক ও ড্রপডাউনের ফোকাস বর্ডার বন্ধ করার জন্য */
+.show-link {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+
+.per-page-select {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    background-color: #fff;
+    outline: none; /* সিলেক্ট বক্সে ক্লিক করলে কালো বর্ডার আসা বন্ধ করার জন্য */
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+/* সব লিংকে ক্লিক/ফোকাস করলে যেন কালো আন্ডারলাইন বা বর্ডার না আসে */
+a:focus, button:focus, select:focus {
+    outline: none !important;
 }
