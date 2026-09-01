@@ -30,25 +30,16 @@
   color: #ff9900;             /* Bedroom লেখার কমলা কালার ঠিক থাকবে */
 }
 
-.breadcrumb-bar a:focus,
-.breadcrumb-bar a:active {
-  color: #ffffff;             /* ক্লিক করার মুহূর্তে বা ফোকাস থাকলে কালার ঠিক থাকবে */
-  outline: none;
-  text-decoration: none;
-}
 /* panel parts starts */
 .panel{
     width: 350px;
     margin-top: 50px;
     margin-left: 60px;
     position: absolute;
-    
 }
 #panel{
-margin-left: 0px;
 float: left;
 }
-
 .panel-heading{
     padding: 20px;
 }
@@ -64,7 +55,6 @@ float: left;
 .btn{
     border: 0cm;
     font-size: 20px;
-    
     vertical-align: text-top;
     padding-top: 10px;
     
@@ -106,11 +96,10 @@ float: left;
 }
 
 /* Banner Parts starts */
-/* গ্রাফিক্স ও অ্যানিমেশন অংশ */
 
 .banner-graphics {
-  flex: 1;
   display: flex;
+  flex: 1;
   justify-content: flex-end;
   margin-top: 50px;
   margin-right: -50px;
@@ -168,13 +157,8 @@ float: left;
     font-size: 20px;
 }
 /* Bedroom Parts Starts */
-#bedroom h1{
-    margin-left: 500px;
-    font-weight: bold;
-    font-size: 50px;
-    padding-top: 50px;
-    
-}
+
+
 /* plugin parts starts */
     
 /* ==========================================
